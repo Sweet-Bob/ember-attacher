@@ -2,7 +2,7 @@
 
 {{#if (and _currentTarget _shouldRender)}}
   {{#ember-popper ariaRole=ariaRole
-                  class="ember-attacher"
+                  class=(if wrapperClass wrapperClass 'ember-attacher')
                   eventsEnabled=false
                   id=id
                   modifiers=_modifiers
